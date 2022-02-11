@@ -110,27 +110,33 @@ namespace WTP_Report_Manager.Forms
             // labelSelectID
             // 
             this.labelSelectID.AutoSize = true;
-            this.labelSelectID.Location = new System.Drawing.Point(9, 7);
+            this.labelSelectID.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelSelectID.ForeColor = System.Drawing.Color.Gray;
+            this.labelSelectID.Location = new System.Drawing.Point(9, 5);
             this.labelSelectID.Name = "labelSelectID";
-            this.labelSelectID.Size = new System.Drawing.Size(54, 13);
+            this.labelSelectID.Size = new System.Drawing.Size(60, 15);
             this.labelSelectID.TabIndex = 3;
             this.labelSelectID.Text = "Select OF";
             // 
             // comboBoxIDList
             // 
+            this.comboBoxIDList.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBoxIDList.FormattingEnabled = true;
-            this.comboBoxIDList.Location = new System.Drawing.Point(9, 27);
+            this.comboBoxIDList.Location = new System.Drawing.Point(9, 25);
             this.comboBoxIDList.Name = "comboBoxIDList";
-            this.comboBoxIDList.Size = new System.Drawing.Size(303, 21);
+            this.comboBoxIDList.Size = new System.Drawing.Size(303, 32);
             this.comboBoxIDList.TabIndex = 2;
             // 
             // buttonShowEvents
             // 
             this.buttonShowEvents.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.buttonShowEvents.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonShowEvents.ForeColor = System.Drawing.Color.Gray;
             this.buttonShowEvents.Image = global::WTP_Report_Manager.Properties.Resources.alarm;
             this.buttonShowEvents.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttonShowEvents.Location = new System.Drawing.Point(3, 73);
             this.buttonShowEvents.Name = "buttonShowEvents";
+            this.buttonShowEvents.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
             this.buttonShowEvents.Size = new System.Drawing.Size(1828, 44);
             this.buttonShowEvents.TabIndex = 2;
             this.buttonShowEvents.Text = "Show Msg / Events";
@@ -140,18 +146,22 @@ namespace WTP_Report_Manager.Forms
             // labelMsg
             // 
             this.labelMsg.AutoSize = true;
+            this.labelMsg.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelMsg.ForeColor = System.Drawing.Color.Gray;
             this.labelMsg.Location = new System.Drawing.Point(3, 120);
             this.labelMsg.Name = "labelMsg";
-            this.labelMsg.Size = new System.Drawing.Size(27, 13);
+            this.labelMsg.Size = new System.Drawing.Size(31, 15);
             this.labelMsg.TabIndex = 3;
             this.labelMsg.Text = "Msg";
             // 
             // labelEvents
             // 
             this.labelEvents.AutoSize = true;
+            this.labelEvents.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelEvents.ForeColor = System.Drawing.Color.Gray;
             this.labelEvents.Location = new System.Drawing.Point(3, 515);
             this.labelEvents.Name = "labelEvents";
-            this.labelEvents.Size = new System.Drawing.Size(40, 13);
+            this.labelEvents.Size = new System.Drawing.Size(43, 15);
             this.labelEvents.TabIndex = 4;
             this.labelEvents.Text = "Events";
             // 

@@ -18,7 +18,7 @@ namespace WTP_Report_Manager.Forms
             comboBoxIDList.Text = comboBoxIDList.Items[0].ToString();
         }
 
-        private void buttonShowResume_Click(object sender, EventArgs e)
+        private async void buttonShowResume_Click(object sender, EventArgs e)
         {
 
             dataGridViewResume.DataSource = null;
@@ -66,7 +66,7 @@ namespace WTP_Report_Manager.Forms
 
             try
             {
-                prodTable = SqlManagment.SqlExecuteQuery(WTP_Report_Manager.AppConfig.SqlConnConfig.SqlConnectionString, prodQry);
+                prodTable = await SqlManagment.SqlExecuteQueryAsync(WTP_Report_Manager.AppConfig.SqlConnConfig.SqlConnectionString, prodQry);
             }
             catch (Exception ex)
             {
@@ -75,7 +75,7 @@ namespace WTP_Report_Manager.Forms
 
             try
             {
-                resumeTable = SqlManagment.SqlExecuteQuery(WTP_Report_Manager.AppConfig.SqlConnConfig.SqlConnectionString, resumeQry);
+                resumeTable = await SqlManagment.SqlExecuteQueryAsync(WTP_Report_Manager.AppConfig.SqlConnConfig.SqlConnectionString, resumeQry);
             }
             catch (Exception ex)
             {
@@ -84,7 +84,7 @@ namespace WTP_Report_Manager.Forms
 
             try
             {
-                wInBox1Table = SqlManagment.SqlExecuteQuery(WTP_Report_Manager.AppConfig.SqlConnConfig.SqlConnectionString, wInBox1Qry);
+                wInBox1Table = await SqlManagment.SqlExecuteQueryAsync(WTP_Report_Manager.AppConfig.SqlConnConfig.SqlConnectionString, wInBox1Qry);
             }
             catch (Exception ex)
             {
@@ -93,7 +93,7 @@ namespace WTP_Report_Manager.Forms
 
             try
             {
-                wInBox2Table = SqlManagment.SqlExecuteQuery(WTP_Report_Manager.AppConfig.SqlConnConfig.SqlConnectionString, wInBox2Qry);
+                wInBox2Table = await SqlManagment.SqlExecuteQueryAsync(WTP_Report_Manager.AppConfig.SqlConnConfig.SqlConnectionString, wInBox2Qry);
             }
             catch (Exception ex)
             {
@@ -102,7 +102,7 @@ namespace WTP_Report_Manager.Forms
 
             try
             {
-                wInBox3Table = SqlManagment.SqlExecuteQuery(WTP_Report_Manager.AppConfig.SqlConnConfig.SqlConnectionString, wInBox3Qry);
+                wInBox3Table = await SqlManagment.SqlExecuteQueryAsync(WTP_Report_Manager.AppConfig.SqlConnConfig.SqlConnectionString, wInBox3Qry);
             }
             catch (Exception ex)
             {

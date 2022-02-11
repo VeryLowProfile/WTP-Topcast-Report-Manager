@@ -83,10 +83,13 @@
             // buttonSearch
             // 
             this.buttonSearch.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.buttonSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonSearch.ForeColor = System.Drawing.Color.Gray;
             this.buttonSearch.Image = global::WTP_Report_Manager.Properties.Resources.search;
             this.buttonSearch.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttonSearch.Location = new System.Drawing.Point(3, 98);
             this.buttonSearch.Name = "buttonSearch";
+            this.buttonSearch.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.buttonSearch.Size = new System.Drawing.Size(194, 89);
             this.buttonSearch.TabIndex = 1;
             this.buttonSearch.Text = "Search";
@@ -96,10 +99,13 @@
             // buttonResume
             // 
             this.buttonResume.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.buttonResume.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonResume.ForeColor = System.Drawing.Color.Gray;
             this.buttonResume.Image = global::WTP_Report_Manager.Properties.Resources.database;
             this.buttonResume.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttonResume.Location = new System.Drawing.Point(3, 193);
             this.buttonResume.Name = "buttonResume";
+            this.buttonResume.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.buttonResume.Size = new System.Drawing.Size(194, 89);
             this.buttonResume.TabIndex = 2;
             this.buttonResume.Text = "Resume";
@@ -109,23 +115,29 @@
             // buttonEventMessages
             // 
             this.buttonEventMessages.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.buttonEventMessages.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonEventMessages.ForeColor = System.Drawing.Color.Gray;
             this.buttonEventMessages.Image = global::WTP_Report_Manager.Properties.Resources.alarm;
             this.buttonEventMessages.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttonEventMessages.Location = new System.Drawing.Point(3, 288);
             this.buttonEventMessages.Name = "buttonEventMessages";
+            this.buttonEventMessages.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.buttonEventMessages.Size = new System.Drawing.Size(194, 89);
             this.buttonEventMessages.TabIndex = 3;
-            this.buttonEventMessages.Text = "Events / Messages";
+            this.buttonEventMessages.Text = "Events\r\nMessages";
             this.buttonEventMessages.UseVisualStyleBackColor = true;
             this.buttonEventMessages.Click += new System.EventHandler(this.buttonEventMessages_Click);
             // 
             // buttonTrends
             // 
             this.buttonTrends.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.buttonTrends.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonTrends.ForeColor = System.Drawing.Color.Gray;
             this.buttonTrends.Image = global::WTP_Report_Manager.Properties.Resources.shuffle;
             this.buttonTrends.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttonTrends.Location = new System.Drawing.Point(3, 383);
             this.buttonTrends.Name = "buttonTrends";
+            this.buttonTrends.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.buttonTrends.Size = new System.Drawing.Size(194, 89);
             this.buttonTrends.TabIndex = 4;
             this.buttonTrends.Text = "Trends";
@@ -135,10 +147,13 @@
             // buttonExport
             // 
             this.buttonExport.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.buttonExport.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonExport.ForeColor = System.Drawing.Color.Gray;
             this.buttonExport.Image = global::WTP_Report_Manager.Properties.Resources.notepad;
             this.buttonExport.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttonExport.Location = new System.Drawing.Point(3, 858);
             this.buttonExport.Name = "buttonExport";
+            this.buttonExport.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.buttonExport.Size = new System.Drawing.Size(194, 89);
             this.buttonExport.TabIndex = 5;
             this.buttonExport.Text = "Reports";

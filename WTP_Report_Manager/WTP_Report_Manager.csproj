@@ -147,5 +147,10 @@
   <ItemGroup>
     <None Include="Resources\minus.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\Camera.png" />
+    <Content Include="Resources\zoom-in.png" />
+    <Content Include="Resources\zoom-out.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

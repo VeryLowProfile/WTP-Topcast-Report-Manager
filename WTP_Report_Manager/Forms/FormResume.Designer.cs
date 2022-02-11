@@ -140,9 +140,11 @@ namespace WTP_Report_Manager.Forms
             // labelResume
             // 
             this.labelResume.AutoSize = true;
+            this.labelResume.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelResume.ForeColor = System.Drawing.Color.Gray;
             this.labelResume.Location = new System.Drawing.Point(3, 120);
             this.labelResume.Name = "labelResume";
-            this.labelResume.Size = new System.Drawing.Size(46, 13);
+            this.labelResume.Size = new System.Drawing.Size(54, 15);
             this.labelResume.TabIndex = 14;
             this.labelResume.Text = "Resume";
             // 
@@ -159,27 +161,33 @@ namespace WTP_Report_Manager.Forms
             // labelSelectID
             // 
             this.labelSelectID.AutoSize = true;
-            this.labelSelectID.Location = new System.Drawing.Point(9, 7);
+            this.labelSelectID.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelSelectID.ForeColor = System.Drawing.Color.Gray;
+            this.labelSelectID.Location = new System.Drawing.Point(9, 5);
             this.labelSelectID.Name = "labelSelectID";
-            this.labelSelectID.Size = new System.Drawing.Size(54, 13);
+            this.labelSelectID.Size = new System.Drawing.Size(60, 15);
             this.labelSelectID.TabIndex = 3;
             this.labelSelectID.Text = "Select OF";
             // 
             // comboBoxIDList
             // 
+            this.comboBoxIDList.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBoxIDList.FormattingEnabled = true;
-            this.comboBoxIDList.Location = new System.Drawing.Point(9, 27);
+            this.comboBoxIDList.Location = new System.Drawing.Point(9, 25);
             this.comboBoxIDList.Name = "comboBoxIDList";
-            this.comboBoxIDList.Size = new System.Drawing.Size(303, 21);
+            this.comboBoxIDList.Size = new System.Drawing.Size(303, 32);
             this.comboBoxIDList.TabIndex = 2;
             // 
             // buttonShowResume
             // 
             this.buttonShowResume.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.buttonShowResume.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonShowResume.ForeColor = System.Drawing.Color.Gray;
             this.buttonShowResume.Image = global::WTP_Report_Manager.Properties.Resources.database;
             this.buttonShowResume.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttonShowResume.Location = new System.Drawing.Point(3, 73);
             this.buttonShowResume.Name = "buttonShowResume";
+            this.buttonShowResume.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.buttonShowResume.Size = new System.Drawing.Size(1828, 44);
             this.buttonShowResume.TabIndex = 1;
             this.buttonShowResume.Text = "Show Resume";
@@ -189,9 +197,11 @@ namespace WTP_Report_Manager.Forms
             // labelCounters
             // 
             this.labelCounters.AutoSize = true;
+            this.labelCounters.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelCounters.ForeColor = System.Drawing.Color.Gray;
             this.labelCounters.Location = new System.Drawing.Point(3, 819);
             this.labelCounters.Name = "labelCounters";
-            this.labelCounters.Size = new System.Drawing.Size(49, 13);
+            this.labelCounters.Size = new System.Drawing.Size(56, 15);
             this.labelCounters.TabIndex = 12;
             this.labelCounters.Text = "Counters";
             // 
@@ -278,18 +288,22 @@ namespace WTP_Report_Manager.Forms
             // labelBoxOut
             // 
             this.labelBoxOut.AutoSize = true;
+            this.labelBoxOut.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelBoxOut.ForeColor = System.Drawing.Color.Gray;
             this.labelBoxOut.Location = new System.Drawing.Point(3, 444);
             this.labelBoxOut.Name = "labelBoxOut";
-            this.labelBoxOut.Size = new System.Drawing.Size(78, 13);
+            this.labelBoxOut.Size = new System.Drawing.Size(87, 15);
             this.labelBoxOut.TabIndex = 9;
             this.labelBoxOut.Text = "Weighing OUT";
             // 
             // labelBoxIn
             // 
             this.labelBoxIn.AutoSize = true;
+            this.labelBoxIn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelBoxIn.ForeColor = System.Drawing.Color.Gray;
             this.labelBoxIn.Location = new System.Drawing.Point(3, 211);
             this.labelBoxIn.Name = "labelBoxIn";
-            this.labelBoxIn.Size = new System.Drawing.Size(66, 13);
+            this.labelBoxIn.Size = new System.Drawing.Size(74, 15);
             this.labelBoxIn.TabIndex = 8;
             this.labelBoxIn.Text = "Weighing IN";
             // 

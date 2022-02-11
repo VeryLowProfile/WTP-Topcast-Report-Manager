@@ -18,7 +18,7 @@ namespace WTP_Report_Manager.Forms
             comboBoxIDList.Text = comboBoxIDList.Items[0].ToString();
         }
 
-        private void buttonShowEvents_Click(object sender, EventArgs e)
+        private async void buttonShowEvents_Click(object sender, EventArgs e)
         {
             string msgQry = SqlQryBuilder.BuildMsgQry(comboBoxIDList.Text);
             string eventQry = SqlQryBuilder.BuildEventsQry(comboBoxIDList.Text);
@@ -28,7 +28,7 @@ namespace WTP_Report_Manager.Forms
 
             try
             {
-                msgTable = SqlManagment.SqlExecuteQuery(WTP_Report_Manager.AppConfig.SqlConnConfig.SqlConnectionString, msgQry);
+                msgTable = await SqlManagment.SqlExecuteQueryAsync(WTP_Report_Manager.AppConfig.SqlConnConfig.SqlConnectionString, msgQry);
             }
             catch (Exception ex)
             {
@@ -40,7 +40,7 @@ namespace WTP_Report_Manager.Forms
 
             try
             {
-                eventTable = SqlManagment.SqlExecuteQuery(WTP_Report_Manager.AppConfig.SqlConnConfig.SqlConnectionString, eventQry);
+                eventTable = await SqlManagment.SqlExecuteQueryAsync(WTP_Report_Manager.AppConfig.SqlConnConfig.SqlConnectionString, eventQry);
             }
             catch (Exception ex)
             {

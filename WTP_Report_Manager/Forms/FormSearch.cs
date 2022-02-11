@@ -90,14 +90,14 @@ namespace WTP_Report_Manager.Forms
             WTP_Report_Manager.SearchParam.SearchID = textBoxBatchID.Text;
         }
 
-        private void buttonSearch_Click(object sender, EventArgs e)
+        private async void buttonSearch_Click(object sender, EventArgs e)
         {
             string qry = SqlQryBuilder.BuildSearchQry(WTP_Report_Manager.SearchParam);
             DataTable dataTable = new DataTable();
 
             try
             {
-                dataTable = SqlManagment.SqlExecuteQuery(WTP_Report_Manager.AppConfig.SqlConnConfig.SqlConnectionString, qry);
+                dataTable = await SqlManagment.SqlExecuteQueryAsync(WTP_Report_Manager.AppConfig.SqlConnConfig.SqlConnectionString, qry);
             }
             catch (Exception ex)
             {

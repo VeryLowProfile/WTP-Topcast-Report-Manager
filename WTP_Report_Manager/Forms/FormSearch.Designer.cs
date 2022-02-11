@@ -121,35 +121,43 @@ namespace WTP_Report_Manager.Forms
             // labelSerachID
             // 
             this.labelSerachID.AutoSize = true;
+            this.labelSerachID.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelSerachID.ForeColor = System.Drawing.Color.Gray;
             this.labelSerachID.Location = new System.Drawing.Point(528, 30);
             this.labelSerachID.Name = "labelSerachID";
-            this.labelSerachID.Size = new System.Drawing.Size(55, 13);
+            this.labelSerachID.Size = new System.Drawing.Size(61, 15);
             this.labelSerachID.TabIndex = 21;
             this.labelSerachID.Text = "Search ID";
             // 
             // textBoxBatchID
             // 
+            this.textBoxBatchID.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxBatchID.ForeColor = System.Drawing.Color.Gray;
             this.textBoxBatchID.Location = new System.Drawing.Point(528, 52);
             this.textBoxBatchID.Name = "textBoxBatchID";
-            this.textBoxBatchID.Size = new System.Drawing.Size(204, 20);
+            this.textBoxBatchID.Size = new System.Drawing.Size(204, 29);
             this.textBoxBatchID.TabIndex = 15;
             this.textBoxBatchID.TextChanged += new System.EventHandler(this.textBoxBatchID_TextChanged);
             // 
             // labelSearchTo
             // 
             this.labelSearchTo.AutoSize = true;
+            this.labelSearchTo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelSearchTo.ForeColor = System.Drawing.Color.Gray;
             this.labelSearchTo.Location = new System.Drawing.Point(9, 86);
             this.labelSearchTo.Name = "labelSearchTo";
-            this.labelSearchTo.Size = new System.Drawing.Size(57, 13);
+            this.labelSearchTo.Size = new System.Drawing.Size(63, 15);
             this.labelSearchTo.TabIndex = 16;
             this.labelSearchTo.Text = "Search To";
             // 
             // checkBoxSearchID
             // 
             this.checkBoxSearchID.AutoSize = true;
+            this.checkBoxSearchID.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkBoxSearchID.ForeColor = System.Drawing.Color.Gray;
             this.checkBoxSearchID.Location = new System.Drawing.Point(528, 8);
             this.checkBoxSearchID.Name = "checkBoxSearchID";
-            this.checkBoxSearchID.Size = new System.Drawing.Size(89, 17);
+            this.checkBoxSearchID.Size = new System.Drawing.Size(96, 19);
             this.checkBoxSearchID.TabIndex = 20;
             this.checkBoxSearchID.Text = "Search By ID";
             this.checkBoxSearchID.UseVisualStyleBackColor = true;
@@ -158,40 +166,48 @@ namespace WTP_Report_Manager.Forms
             // labelSearchFrom
             // 
             this.labelSearchFrom.AutoSize = true;
+            this.labelSearchFrom.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelSearchFrom.ForeColor = System.Drawing.Color.Gray;
             this.labelSearchFrom.Location = new System.Drawing.Point(9, 30);
             this.labelSearchFrom.Name = "labelSearchFrom";
-            this.labelSearchFrom.Size = new System.Drawing.Size(67, 13);
+            this.labelSearchFrom.Size = new System.Drawing.Size(78, 15);
             this.labelSearchFrom.TabIndex = 12;
             this.labelSearchFrom.Text = "Search From";
             // 
             // datePickerFrom
             // 
+            this.datePickerFrom.CalendarForeColor = System.Drawing.Color.Gray;
+            this.datePickerFrom.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.datePickerFrom.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.datePickerFrom.Location = new System.Drawing.Point(9, 52);
             this.datePickerFrom.MaxDate = new System.DateTime(2030, 1, 1, 0, 0, 0, 0);
             this.datePickerFrom.MinDate = new System.DateTime(2021, 1, 1, 0, 0, 0, 0);
             this.datePickerFrom.Name = "datePickerFrom";
-            this.datePickerFrom.Size = new System.Drawing.Size(200, 20);
+            this.datePickerFrom.Size = new System.Drawing.Size(200, 29);
             this.datePickerFrom.TabIndex = 13;
             this.datePickerFrom.ValueChanged += new System.EventHandler(this.datePickerFrom_ValueChanged);
             // 
             // datePickerTo
             // 
+            this.datePickerTo.CalendarForeColor = System.Drawing.Color.Gray;
+            this.datePickerTo.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.datePickerTo.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.datePickerTo.Location = new System.Drawing.Point(9, 107);
             this.datePickerTo.MaxDate = new System.DateTime(2030, 1, 1, 0, 0, 0, 0);
             this.datePickerTo.MinDate = new System.DateTime(2021, 1, 1, 0, 0, 0, 0);
             this.datePickerTo.Name = "datePickerTo";
-            this.datePickerTo.Size = new System.Drawing.Size(200, 20);
+            this.datePickerTo.Size = new System.Drawing.Size(200, 29);
             this.datePickerTo.TabIndex = 17;
             this.datePickerTo.ValueChanged += new System.EventHandler(this.datePickerTo_ValueChanged);
             // 
             // checkBoxSearchDate
             // 
             this.checkBoxSearchDate.AutoSize = true;
+            this.checkBoxSearchDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkBoxSearchDate.ForeColor = System.Drawing.Color.Gray;
             this.checkBoxSearchDate.Location = new System.Drawing.Point(9, 8);
             this.checkBoxSearchDate.Name = "checkBoxSearchDate";
-            this.checkBoxSearchDate.Size = new System.Drawing.Size(101, 17);
+            this.checkBoxSearchDate.Size = new System.Drawing.Size(110, 19);
             this.checkBoxSearchDate.TabIndex = 19;
             this.checkBoxSearchDate.Text = "Search By Date";
             this.checkBoxSearchDate.UseVisualStyleBackColor = true;
@@ -200,10 +216,13 @@ namespace WTP_Report_Manager.Forms
             // buttonSearch
             // 
             this.buttonSearch.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.buttonSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonSearch.ForeColor = System.Drawing.Color.Gray;
             this.buttonSearch.Image = global::WTP_Report_Manager.Properties.Resources.search;
             this.buttonSearch.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttonSearch.Location = new System.Drawing.Point(3, 153);
             this.buttonSearch.Name = "buttonSearch";
+            this.buttonSearch.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
             this.buttonSearch.Size = new System.Drawing.Size(1828, 44);
             this.buttonSearch.TabIndex = 1;
             this.buttonSearch.TabStop = false;
@@ -214,8 +233,11 @@ namespace WTP_Report_Manager.Forms
             // buttonSelect
             // 
             this.buttonSelect.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.buttonSelect.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonSelect.ForeColor = System.Drawing.Color.Gray;
             this.buttonSelect.Location = new System.Drawing.Point(3, 533);
             this.buttonSelect.Name = "buttonSelect";
+            this.buttonSelect.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
             this.buttonSelect.Size = new System.Drawing.Size(1828, 44);
             this.buttonSelect.TabIndex = 2;
             this.buttonSelect.Text = "Select";

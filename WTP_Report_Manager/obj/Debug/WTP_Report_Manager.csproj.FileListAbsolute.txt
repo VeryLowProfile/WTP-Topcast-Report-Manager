@@ -12,3 +12,17 @@ C:\Progetti\VisualStudio\Develop\WTP_Report_Manager\WTP_Report_Manager\WTP_Repor
 C:\Progetti\VisualStudio\Develop\WTP_Report_Manager\WTP_Report_Manager\WTP_Report_Manager\obj\Debug\WTP_Report_Manager.Forms.FormResume.resources
 C:\Progetti\VisualStudio\Develop\WTP_Report_Manager\WTP_Report_Manager\WTP_Report_Manager\obj\Debug\WTP_Report_Manager.Forms.FormSearch.resources
 C:\Progetti\VisualStudio\Develop\WTP_Report_Manager\WTP_Report_Manager\WTP_Report_Manager\obj\Debug\WTP_Report_Manager.Forms.FormTrends.resources
+C:\Progetti\VisualStudio\Develop\WTP_Report_Manager\WTP_Report_Manager\bin\Debug\WTP_Report_Manager.dll
+C:\Progetti\VisualStudio\Develop\WTP_Report_Manager\WTP_Report_Manager\bin\Debug\WTP_Report_Manager.pdb
+C:\Progetti\VisualStudio\Develop\WTP_Report_Manager\WTP_Report_Manager\obj\Debug\WTP_Report_Manager.csproj.AssemblyReference.cache
+C:\Progetti\VisualStudio\Develop\WTP_Report_Manager\WTP_Report_Manager\obj\Debug\WTP_Report_Manager.Forms.FormEvents.resources
+C:\Progetti\VisualStudio\Develop\WTP_Report_Manager\WTP_Report_Manager\obj\Debug\WTP_Report_Manager.Forms.FormReports.resources
+C:\Progetti\VisualStudio\Develop\WTP_Report_Manager\WTP_Report_Manager\obj\Debug\WTP_Report_Manager.Forms.FormResume.resources
+C:\Progetti\VisualStudio\Develop\WTP_Report_Manager\WTP_Report_Manager\obj\Debug\WTP_Report_Manager.Forms.FormSearch.resources
+C:\Progetti\VisualStudio\Develop\WTP_Report_Manager\WTP_Report_Manager\obj\Debug\WTP_Report_Manager.Forms.FormTrends.resources
+C:\Progetti\VisualStudio\Develop\WTP_Report_Manager\WTP_Report_Manager\obj\Debug\WTP_Report_Manager.Properties.Resources.resources
+C:\Progetti\VisualStudio\Develop\WTP_Report_Manager\WTP_Report_Manager\obj\Debug\WTP_Report_Manager.WTP_Report_Manager.resources
+C:\Progetti\VisualStudio\Develop\WTP_Report_Manager\WTP_Report_Manager\obj\Debug\WTP_Report_Manager.csproj.GenerateResource.cache
+C:\Progetti\VisualStudio\Develop\WTP_Report_Manager\WTP_Report_Manager\obj\Debug\WTP_Report_Manager.csproj.CoreCompileInputs.cache
+C:\Progetti\VisualStudio\Develop\WTP_Report_Manager\WTP_Report_Manager\obj\Debug\WTP_Report_Manager.dll
+C:\Progetti\VisualStudio\Develop\WTP_Report_Manager\WTP_Report_Manager\obj\Debug\WTP_Report_Manager.pdb

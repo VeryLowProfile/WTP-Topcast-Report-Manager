@@ -55,12 +55,20 @@ namespace WTP_Report_Manager
 
         private void FillAppconfig()
         {
-            AppConfig.SqlConnConfig.SqlServerIP = "192.168.10.33";
+            //AppConfig.SqlConnConfig.SqlServerIP = "192.168.10.33";
+            //AppConfig.SqlConnConfig.SqlServerName = "SQLEXPRESS";
+            //AppConfig.SqlConnConfig.SqlDbName = "WTP";
+            //AppConfig.SqlConnConfig.SqlUserID = "WTP";
+            //AppConfig.SqlConnConfig.SqlUserPWD = "Topcast";
+            //AppConfig.SqlConnConfig.SqlConnectionString = $"Server = {AppConfig.SqlConnConfig.SqlServerIP}\\{AppConfig.SqlConnConfig.SqlServerName}; Database = {AppConfig.SqlConnConfig.SqlDbName}; UID = {AppConfig.SqlConnConfig.SqlUserID}; PWD = {AppConfig.SqlConnConfig.SqlUserPWD}";
+
+            AppConfig.SqlConnConfig.SqlServerIP = "192.168.10.100";
             AppConfig.SqlConnConfig.SqlServerName = "SQLEXPRESS";
             AppConfig.SqlConnConfig.SqlDbName = "WTP";
-            AppConfig.SqlConnConfig.SqlUserID = "WTP";
+            AppConfig.SqlConnConfig.SqlUserID = "Topcast";
             AppConfig.SqlConnConfig.SqlUserPWD = "Topcast";
             AppConfig.SqlConnConfig.SqlConnectionString = $"Server = {AppConfig.SqlConnConfig.SqlServerIP}\\{AppConfig.SqlConnConfig.SqlServerName}; Database = {AppConfig.SqlConnConfig.SqlDbName}; UID = {AppConfig.SqlConnConfig.SqlUserID}; PWD = {AppConfig.SqlConnConfig.SqlUserPWD}";
+
 
             AppConfig.PlotVar.Var.Add("TC1Cru");
             AppConfig.PlotVar.Var.Add("TC2Cru");

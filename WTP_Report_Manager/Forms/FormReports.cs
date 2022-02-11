@@ -198,7 +198,7 @@ namespace WTP_Report_Manager.Forms
             {
                 string fileName = textBoxFilePath.Text + $"\\{DateTime.Now.ToString("dd_MM_yyyy_HH_mm_ss")}_Weighing_In.csv";
 
-                richTextBoxLog.Text = $"Start fetching report data for {fileName} \n";
+                richTextBoxLog.AppendText($"Start fetching report data for {fileName} \n");
 
                 DataTable finalTable = new DataTable();
 
@@ -242,14 +242,13 @@ namespace WTP_Report_Manager.Forms
                         }
                     }
 
-                    richTextBoxLog.Text = $"{richTextBoxLog.Text}Fetching report data for {id} Done \n";
+                    richTextBoxLog.AppendText($"Fetching report data for {id} Done \n");
 
                 }
 
                 ExportManagement.ExportDataTableToCSV(finalTable, fileName, ";");
 
-                richTextBoxLog.Text = $"{richTextBoxLog.Text}Printing {fileName} Done \n";
-                richTextBoxLog.Text = $"{richTextBoxLog.Text}{fileName} Complete \n";
+                richTextBoxLog.AppendText($"Done \n");
 
             } 
 
@@ -258,7 +257,7 @@ namespace WTP_Report_Manager.Forms
 
                 string fileName = textBoxFilePath.Text + $"\\{DateTime.Now.ToString("dd_MM_yyyy_HH_mm_ss")}_Weighing_Out.csv";
 
-                richTextBoxLog.Text = $"{richTextBoxLog.Text}Start fetching report data for {fileName} \n";
+                richTextBoxLog.AppendText($"Start fetching report data for {fileName} \n");
 
                 DataTable finalTable = new DataTable();
 
@@ -437,14 +436,14 @@ namespace WTP_Report_Manager.Forms
                         ;
                     }
 
-                    richTextBoxLog.Text = $"{richTextBoxLog.Text}Fetching report data for {id} Done \n";
+                    richTextBoxLog.AppendText($"Fetching report data for {id} Done \n");
 
                 }
 
                 ExportManagement.ExportDataTableToCSV(finalTable, fileName, ";");
 
-                richTextBoxLog.Text = $"{richTextBoxLog.Text}Printing {fileName} Done \n";
-                richTextBoxLog.Text = $"{richTextBoxLog.Text}{fileName} Complete \n";
+                richTextBoxLog.AppendText($"Printing {fileName} Done \n");
+                richTextBoxLog.AppendText($"{fileName} Complete \n");
 
             }
 
@@ -453,7 +452,7 @@ namespace WTP_Report_Manager.Forms
 
                 string fileName = textBoxFilePath.Text + $"\\{DateTime.Now.ToString("dd_MM_yyyy_HH_mm_ss")}_Resume.csv";
 
-                richTextBoxLog.Text = $"{richTextBoxLog.Text}Start fetching report data for {fileName} \n";
+                richTextBoxLog.AppendText($"Start fetching report data for {fileName} \n");
 
                 DataTable finalTable = new DataTable();
 
@@ -480,14 +479,14 @@ namespace WTP_Report_Manager.Forms
                         MessageBox.Show(ex.Message + " resumeTable", "", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                     }
 
-                    richTextBoxLog.Text = $"{richTextBoxLog.Text}Fetching report data for {id} Done \n";
+                    richTextBoxLog.AppendText($"Fetching report data for {id} Done \n");
 
                 }
 
                 ExportManagement.ExportDataTableToCSV(finalTable, fileName, ";");
 
-                richTextBoxLog.Text = $"{richTextBoxLog.Text}Printing {fileName} Done \n";
-                richTextBoxLog.Text = $"{richTextBoxLog.Text}{fileName} Done \n";
+                richTextBoxLog.AppendText($"Printing {fileName} Done \n");
+                richTextBoxLog.AppendText($"{fileName} Done \n");
 
             }
 
@@ -496,7 +495,7 @@ namespace WTP_Report_Manager.Forms
 
                 string fileName = textBoxFilePath.Text + $"\\{DateTime.Now.ToString("dd_MM_yyyy_HH_mm_ss")}_Counters.csv";
 
-                richTextBoxLog.Text = $"{richTextBoxLog.Text}Start fetching report data for {fileName} \n";
+                richTextBoxLog.AppendText($"Start fetching report data for {fileName} \n");
 
                 DataTable finalTable = new DataTable();
 
@@ -523,14 +522,14 @@ namespace WTP_Report_Manager.Forms
                         MessageBox.Show(ex.Message + " countersTable", "", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                     }
 
-                    richTextBoxLog.Text = $"{richTextBoxLog.Text}Fetching report data for {id} Done \n";
+                    richTextBoxLog.AppendText($"Fetching report data for {id} Done \n");
 
                 }
 
                 ExportManagement.ExportDataTableToCSV(finalTable, fileName, ";");
 
-                richTextBoxLog.Text = $"{richTextBoxLog.Text}Printing {fileName} Done \n";
-                richTextBoxLog.Text = $"{richTextBoxLog.Text}{fileName} Done \n";
+                richTextBoxLog.AppendText($"Printing {fileName} Done \n");
+                richTextBoxLog.AppendText($"{fileName} Done \n");
             }
 
             if (checkBoxMsgData.Checked)
@@ -541,7 +540,7 @@ namespace WTP_Report_Manager.Forms
                     string msgQry = SqlQryBuilder.BuildMsgQry(id);
                     DataTable dataTable = new DataTable();
 
-                    richTextBoxLog.Text = $"{richTextBoxLog.Text}Start fetching report data for {fileName} \n";
+                    richTextBoxLog.AppendText($"Start fetching report data for {fileName} \n");
 
                     try
                     {
@@ -552,12 +551,12 @@ namespace WTP_Report_Manager.Forms
                         MessageBox.Show(ex.Message + " eventQry", "", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                     }
 
-                    richTextBoxLog.Text = $"{richTextBoxLog.Text}Fetching report data for {id} Done \n";
+                    richTextBoxLog.AppendText($"Fetching report data for {id} Done \n");
 
                     ExportManagement.ExportDataTableToCSV(dataTable, fileName, ";");
 
-                    richTextBoxLog.Text = $"{richTextBoxLog.Text}Printing {fileName} Done \n";
-                    richTextBoxLog.Text = $"{richTextBoxLog.Text}{fileName} Done \n";
+                    richTextBoxLog.AppendText($"Printing {fileName} Done \n");
+                    richTextBoxLog.AppendText($"{fileName} Done \n");
                 }
             }
 
@@ -569,7 +568,7 @@ namespace WTP_Report_Manager.Forms
                     string eventQry = SqlQryBuilder.BuildEventsQry(id);
                     DataTable dataTable = new DataTable();
 
-                    richTextBoxLog.Text = $"{richTextBoxLog.Text}Start fetching report data for {fileName} \n";
+                    richTextBoxLog.AppendText($"Start fetching report data for {fileName} \n");
 
                     try
                     {
@@ -580,12 +579,12 @@ namespace WTP_Report_Manager.Forms
                         MessageBox.Show(ex.Message + " eventQry", "", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                     }
 
-                    richTextBoxLog.Text = $"{richTextBoxLog.Text}Fetching report data for {id} Done \n";
+                    richTextBoxLog.AppendText($"Fetching report data for {id} Done \n");
 
                     ExportManagement.ExportDataTableToCSV(dataTable, fileName, ";");
 
-                    richTextBoxLog.Text = $"{richTextBoxLog.Text}Printing {fileName} Done \n";
-                    richTextBoxLog.Text = $"{richTextBoxLog.Text}{fileName} Done \n";
+                    richTextBoxLog.AppendText($"Printing {fileName} Done \n");
+                    richTextBoxLog.AppendText($"{fileName} Done \n");
                 }
             }
 
@@ -597,7 +596,7 @@ namespace WTP_Report_Manager.Forms
                     string plotQry = SqlQryBuilder.BuildPlotQry(id, WTP_Report_Manager.AppConfig.PlotVar.Var);
                     DataTable dataTable = new DataTable();
 
-                    richTextBoxLog.Text = $"{richTextBoxLog.Text}Start fetching report data for {fileName} \n";
+                    richTextBoxLog.AppendText($"Start fetching report data for {fileName} \n");
 
                     try
                     {
@@ -608,12 +607,12 @@ namespace WTP_Report_Manager.Forms
                         MessageBox.Show(ex.Message + " plotQry", "", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                     }
 
-                    richTextBoxLog.Text = $"{richTextBoxLog.Text}Fetching report data for {id} Done \n";
+                    richTextBoxLog.AppendText($"Fetching report data for {id} Done \n");
 
                     ExportManagement.ExportDataTableToCSV(dataTable, fileName, ";");
 
-                    richTextBoxLog.Text = $"{richTextBoxLog.Text}Printing {fileName} Done \n";
-                    richTextBoxLog.Text = $"{richTextBoxLog.Text}{fileName} Done \n";
+                    richTextBoxLog.AppendText($"Printing {fileName} Done \n");
+                    richTextBoxLog.AppendText($"{fileName} Done \n");
                 }
             }
         }
