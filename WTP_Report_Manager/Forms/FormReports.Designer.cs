@@ -364,20 +364,25 @@ namespace WTP_Report_Manager.Forms
             // 
             // richTextBoxLog
             // 
+            this.richTextBoxLog.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.richTextBoxLog.Dock = System.Windows.Forms.DockStyle.Fill;
             this.richTextBoxLog.Location = new System.Drawing.Point(3, 333);
             this.richTextBoxLog.Name = "richTextBoxLog";
+            this.richTextBoxLog.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.Vertical;
             this.richTextBoxLog.Size = new System.Drawing.Size(1828, 545);
             this.richTextBoxLog.TabIndex = 7;
             this.richTextBoxLog.Text = "";
             // 
             // progressBar
             // 
+            this.progressBar.BackColor = System.Drawing.Color.Gray;
             this.progressBar.Dock = System.Windows.Forms.DockStyle.Fill;
             this.progressBar.Location = new System.Drawing.Point(3, 884);
             this.progressBar.Name = "progressBar";
             this.progressBar.Size = new System.Drawing.Size(1828, 24);
+            this.progressBar.Style = System.Windows.Forms.ProgressBarStyle.Continuous;
             this.progressBar.TabIndex = 8;
+            this.progressBar.Tag = "";
             // 
             // FormReports
             // 

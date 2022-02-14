@@ -49,7 +49,6 @@ namespace WTP_Report_Manager.Forms
             this.buttonZoomOut = new System.Windows.Forms.Button();
             this.buttonZoomIn = new System.Windows.Forms.Button();
             this.panelPlot = new System.Windows.Forms.Panel();
-            this.dataGridViewPlot = new System.Windows.Forms.DataGridView();
             this.tableLayoutPanelTrends.SuspendLayout();
             this.panel1.SuspendLayout();
             this.tableLayoutPanelSelect.SuspendLayout();
@@ -57,7 +56,6 @@ namespace WTP_Report_Manager.Forms
             this.panelContainerPlot.SuspendLayout();
             this.tableLayoutPanelPlot.SuspendLayout();
             this.panelTrendControls.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewPlot)).BeginInit();
             this.SuspendLayout();
             // 
             // tableLayoutPanelTrends
@@ -68,16 +66,14 @@ namespace WTP_Report_Manager.Forms
             this.tableLayoutPanelTrends.Controls.Add(this.panel1, 0, 0);
             this.tableLayoutPanelTrends.Controls.Add(this.tableLayoutPanelSelect, 0, 1);
             this.tableLayoutPanelTrends.Controls.Add(this.buttonShowTrends, 0, 2);
-            this.tableLayoutPanelTrends.Controls.Add(this.panelContainerPlot, 0, 4);
-            this.tableLayoutPanelTrends.Controls.Add(this.dataGridViewPlot, 0, 3);
+            this.tableLayoutPanelTrends.Controls.Add(this.panelContainerPlot, 0, 3);
             this.tableLayoutPanelTrends.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanelTrends.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanelTrends.Name = "tableLayoutPanelTrends";
-            this.tableLayoutPanelTrends.RowCount = 5;
+            this.tableLayoutPanelTrends.RowCount = 4;
             this.tableLayoutPanelTrends.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 70F));
             this.tableLayoutPanelTrends.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 180F));
             this.tableLayoutPanelTrends.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 50F));
-            this.tableLayoutPanelTrends.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 150F));
             this.tableLayoutPanelTrends.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanelTrends.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanelTrends.Size = new System.Drawing.Size(1834, 911);
@@ -261,9 +257,9 @@ namespace WTP_Report_Manager.Forms
             // 
             this.panelContainerPlot.Controls.Add(this.tableLayoutPanelPlot);
             this.panelContainerPlot.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelContainerPlot.Location = new System.Drawing.Point(3, 453);
+            this.panelContainerPlot.Location = new System.Drawing.Point(3, 303);
             this.panelContainerPlot.Name = "panelContainerPlot";
-            this.panelContainerPlot.Size = new System.Drawing.Size(1828, 455);
+            this.panelContainerPlot.Size = new System.Drawing.Size(1828, 605);
             this.panelContainerPlot.TabIndex = 5;
             // 
             // tableLayoutPanelPlot
@@ -280,7 +276,7 @@ namespace WTP_Report_Manager.Forms
             this.tableLayoutPanelPlot.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanelPlot.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 455F));
             this.tableLayoutPanelPlot.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 455F));
-            this.tableLayoutPanelPlot.Size = new System.Drawing.Size(1828, 455);
+            this.tableLayoutPanelPlot.Size = new System.Drawing.Size(1828, 605);
             this.tableLayoutPanelPlot.TabIndex = 0;
             // 
             // panelTrendControls
@@ -291,7 +287,7 @@ namespace WTP_Report_Manager.Forms
             this.panelTrendControls.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelTrendControls.Location = new System.Drawing.Point(1761, 3);
             this.panelTrendControls.Name = "panelTrendControls";
-            this.panelTrendControls.Size = new System.Drawing.Size(64, 449);
+            this.panelTrendControls.Size = new System.Drawing.Size(64, 599);
             this.panelTrendControls.TabIndex = 6;
             // 
             // buttonTakePicture
@@ -337,23 +333,8 @@ namespace WTP_Report_Manager.Forms
             this.panelPlot.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelPlot.Location = new System.Drawing.Point(3, 3);
             this.panelPlot.Name = "panelPlot";
-            this.panelPlot.Size = new System.Drawing.Size(1752, 449);
+            this.panelPlot.Size = new System.Drawing.Size(1752, 599);
             this.panelPlot.TabIndex = 0;
-            // 
-            // dataGridViewPlot
-            // 
-            this.dataGridViewPlot.AllowUserToAddRows = false;
-            this.dataGridViewPlot.AllowUserToDeleteRows = false;
-            this.dataGridViewPlot.AllowUserToResizeColumns = false;
-            this.dataGridViewPlot.AllowUserToResizeRows = false;
-            this.dataGridViewPlot.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridViewPlot.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            this.dataGridViewPlot.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewPlot.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridViewPlot.Location = new System.Drawing.Point(3, 303);
-            this.dataGridViewPlot.Name = "dataGridViewPlot";
-            this.dataGridViewPlot.Size = new System.Drawing.Size(1828, 144);
-            this.dataGridViewPlot.TabIndex = 6;
             // 
             // FormTrends
             // 
@@ -373,7 +354,6 @@ namespace WTP_Report_Manager.Forms
             this.tableLayoutPanelPlot.ResumeLayout(false);
             this.panelTrendControls.ResumeLayout(false);
             this.panelTrendControls.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewPlot)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -394,7 +374,6 @@ namespace WTP_Report_Manager.Forms
         private System.Windows.Forms.Button buttonSub;
         private System.Windows.Forms.Button buttonAddAll;
         private System.Windows.Forms.Button buttonSubAll;
-        private System.Windows.Forms.DataGridView dataGridViewPlot;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanelPlot;
         private System.Windows.Forms.Panel panelTrendControls;
         private System.Windows.Forms.Button buttonTakePicture;

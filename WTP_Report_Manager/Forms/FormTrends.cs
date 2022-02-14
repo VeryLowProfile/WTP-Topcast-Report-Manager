@@ -101,11 +101,10 @@ namespace WTP_Report_Manager.Forms
 
         private void buttonAdd_Click(object sender, EventArgs e)
         {
-
-            int selectedIndex = listBoxHide.SelectedIndices[0];
-
             if (listBoxHide.SelectedItems != null)
             {
+
+                int selectedIndex = listBoxHide.SelectedIndices[0];
 
                 foreach (string item in listBoxHide.SelectedItems)
                 {
@@ -137,11 +136,11 @@ namespace WTP_Report_Manager.Forms
 
         private void buttonSub_Click(object sender, EventArgs e)
         {
-
-            int selectedIndex = listBoxShow.SelectedIndices[0];
-
             if (listBoxShow.SelectedItems != null)
             {
+
+                int selectedIndex = listBoxHide.SelectedIndices[0];
+
                 foreach (string item in listBoxShow.SelectedItems)
                 {
                     WTP_Report_Manager.visualizationData.MovePlotShowToHide(item);
@@ -201,6 +200,8 @@ namespace WTP_Report_Manager.Forms
 
         private void Chart_MouseMove(object sender, MouseEventArgs e)
         {
+            tooltip.Hide(chart);
+
             var pos = e.Location;
 
             var results = chart.HitTest(pos.X, pos.Y, false, ChartElementType.DataPoint);
@@ -215,6 +216,32 @@ namespace WTP_Report_Manager.Forms
                         tooltip.Show("VALUE = " + prop.YValues[0], this.chart, pos.X, pos.Y - 15);
                     }
                 }
+            }
+        }
+
+        private void buttonZoomIn_Click(object sender, EventArgs e)
+        {
+            double startX = chartArea.AxisX.PositionToValue(0);
+            double endX = chartArea.AxisX.PositionToValue(100);
+            chartArea.AxisX.ScaleView.Zoom((startX * 1.05), (endX * 0.95));
+        }
+
+        private void buttonZoomOut_Click(object sender, EventArgs e)
+        {
+            chartArea.AxisX.ScaleView.ZoomReset();
+            chartArea.AxisY.ScaleView.ZoomReset();
+        }
+
+        private void buttonTakePicture_Click(object sender, EventArgs e)
+        {
+            FolderBrowserDialog folderBrowserDialog = new FolderBrowserDialog();
+            folderBrowserDialog.SelectedPath = @"Z:\METIER\";
+            DialogResult result = folderBrowserDialog.ShowDialog();
+
+            if (result == DialogResult.OK)
+            {
+                string folderPath = folderBrowserDialog.SelectedPath + @"\" + "TrendImage_" + comboBoxIDList.Text + ".png";
+                chart.SaveImage(folderPath, ChartImageFormat.Png);
             }
         }
 
@@ -288,31 +315,6 @@ namespace WTP_Report_Manager.Forms
                 buttonSub.Visible = true;
                 buttonSubAll.Visible = true;
                 buttonShowTrends.Visible = true;
-            }
-        }
-
-        private void buttonZoomIn_Click(object sender, EventArgs e)
-        {
-            double startX = chartArea.AxisX.PositionToValue(0);
-            double endX = chartArea.AxisX.PositionToValue(100);
-            chartArea.AxisX.ScaleView.Zoom((startX * 1.05), (endX * 0.95));
-        }
-
-        private void buttonZoomOut_Click(object sender, EventArgs e)
-        {
-            chartArea.AxisX.ScaleView.ZoomReset();
-            chartArea.AxisY.ScaleView.ZoomReset();
-        }
-        private void buttonTakePicture_Click(object sender, EventArgs e)
-        {
-            FolderBrowserDialog folderBrowserDialog = new FolderBrowserDialog();
-            folderBrowserDialog.SelectedPath = @"Z:\METIER\";
-            DialogResult result = folderBrowserDialog.ShowDialog();
-
-            if (result == DialogResult.OK)
-            {
-                string folderPath = folderBrowserDialog.SelectedPath + @"\" + "TrendImage_" + comboBoxIDList.Text + ".png";
-                chart.SaveImage(folderPath, ChartImageFormat.Png);
             }
         }
     }
