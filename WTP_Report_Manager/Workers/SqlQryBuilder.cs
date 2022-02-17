@@ -18,6 +18,11 @@ namespace WTP_Report_Manager.Workers
 
             if (searchParam.SearchByDate)
             {
+                if (searchParam.SearchDateFrom.Date == searchParam.SearchDateTo.Date)
+                {
+                    searchParam.SearchDateTo = searchParam.SearchDateTo.AddDays(1);
+                } 
+
                 qry = $"SELECT Fo AS [OF], DateTime FROM Resume WHERE DateTime >= '{searchParam.SearchDateFrom.Date.ToString("yyyy-MM-dd HH:mm:ss")}' AND DateTime <= '{searchParam.SearchDateTo.Date.ToString("yyyy-MM-dd HH:mm:ss")}' ORDER BY DateTime";
             }
 

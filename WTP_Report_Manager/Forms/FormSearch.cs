@@ -69,20 +69,11 @@ namespace WTP_Report_Manager.Forms
         private void datePickerFrom_ValueChanged(object sender, EventArgs e)
         {
             WTP_Report_Manager.SearchParam.SearchDateFrom = datePickerFrom.Value;
-            WTP_Report_Manager.SearchParam.SearchDateFrom.AddHours(-WTP_Report_Manager.SearchParam.SearchDateFrom.Hour);
-            WTP_Report_Manager.SearchParam.SearchDateFrom.AddMinutes(-WTP_Report_Manager.SearchParam.SearchDateFrom.Minute);
-            WTP_Report_Manager.SearchParam.SearchDateFrom.AddSeconds(-WTP_Report_Manager.SearchParam.SearchDateFrom.Second);
-            WTP_Report_Manager.SearchParam.SearchDateFrom.AddMilliseconds(-WTP_Report_Manager.SearchParam.SearchDateFrom.Millisecond);
         }
 
         private void datePickerTo_ValueChanged(object sender, EventArgs e)
         {
             WTP_Report_Manager.SearchParam.SearchDateTo = datePickerTo.Value;
-            WTP_Report_Manager.SearchParam.SearchDateTo.AddHours(-WTP_Report_Manager.SearchParam.SearchDateTo.Hour);
-            WTP_Report_Manager.SearchParam.SearchDateTo.AddMinutes(-WTP_Report_Manager.SearchParam.SearchDateTo.Minute);
-            WTP_Report_Manager.SearchParam.SearchDateTo.AddSeconds(-WTP_Report_Manager.SearchParam.SearchDateTo.Second);
-            WTP_Report_Manager.SearchParam.SearchDateTo.AddMilliseconds(-WTP_Report_Manager.SearchParam.SearchDateTo.Millisecond);
-            WTP_Report_Manager.SearchParam.SearchDateTo.AddHours(23).AddMinutes(59).AddSeconds(59);
         }
 
         private void textBoxBatchID_TextChanged(object sender, EventArgs e)
