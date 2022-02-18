@@ -74,6 +74,7 @@ namespace WTP_Report_Manager.Forms
         private void datePickerTo_ValueChanged(object sender, EventArgs e)
         {
             WTP_Report_Manager.SearchParam.SearchDateTo = datePickerTo.Value;
+            WTP_Report_Manager.SearchParam.SearchDateTo = WTP_Report_Manager.SearchParam.SearchDateTo.AddDays(1);
         }
 
         private void textBoxBatchID_TextChanged(object sender, EventArgs e)
