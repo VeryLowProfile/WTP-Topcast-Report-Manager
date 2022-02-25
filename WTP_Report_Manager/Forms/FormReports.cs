@@ -1,8 +1,11 @@
 ﻿using System;
 using System.Data;
+using System.IO;
 using System.Windows.Forms;
 using System.Drawing;
 using System.Threading;
+using System.Threading.Tasks;
+using System.Collections.Generic;
 using WTP_Report_Manager.Workers;
 
 namespace WTP_Report_Manager.Forms
@@ -36,6 +39,8 @@ namespace WTP_Report_Manager.Forms
             checkBoxCountersData.Checked = true;
 
             textBoxFilePath.Text = WTP_Report_Manager.AppConfig.SaveFilePath;
+
+            labelDeletePath.Text = WTP_Report_Manager.AppConfig.SaveFilePath;
         }
 
         private void buttonAdd_Click(object sender, EventArgs e)
@@ -191,55 +196,73 @@ namespace WTP_Report_Manager.Forms
             if (folderBrowserDialog.ShowDialog() == DialogResult.OK)
             {
                 textBoxFilePath.Text = folderBrowserDialog.SelectedPath;
+                labelDeletePath.Text = folderBrowserDialog.SelectedPath;
             }
         }
 
-        private void buttonPrintReport_Click(object sender, EventArgs e)
+        private async void buttonPrintReport_Click(object sender, EventArgs e)
         {
             calculateProgrssBar();
 
+
+            List<Task> tasks = new List<Task>();
+
             if (checkBoxInData.Checked)
             {
-                Thread weighInThread = new Thread(weighInReport);
-                weighInThread.Start();
+                tasks.Add(Task.Run(() => weighInReport()));
             }
 
             if (checkBoxOutData.Checked)
             {
-                Thread weighOutThread = new Thread(weighOutReport);
-                weighOutThread.Start();
+                tasks.Add(Task.Run(() => weighOutReport()));
             }
 
             if (checkBoxResume.Checked)
             {
-                Thread resumeThread = new Thread(resumeReport);
-                resumeThread.Start();
+                tasks.Add(Task.Run(() => resumeReport()));
             }
 
             if (checkBoxCountersData.Checked)
             {
-                Thread countersThread = new Thread(countersReport);
-                countersThread.Start();
+                tasks.Add(Task.Run(() => countersReport()));
             }
 
             if (checkBoxMsgData.Checked)
             {
-                Thread msgThread = new Thread(msgReport);
-                msgThread.Start();
+                tasks.Add(Task.Run(() => msgReport()));
             }
 
             if (checkBoxEventData.Checked)
             {
-                Thread eventThread = new Thread(eventReport);
-                eventThread.Start();
+                tasks.Add(Task.Run(() => eventReport()));
             }
 
             if (checkBoxTrendData.Checked)
             {
-                Thread trendThread = new Thread(trendReport);
-                trendThread.Start();
+                tasks.Add(Task.Run(() => trendReport()));
             }
 
+            await Task.WhenAll(tasks);
+
+            progressBar.Invoke(new Action(() => progressBar.Value = 0));
+            MessageBox.Show("Print Done");
+
+        }
+
+        private void buttonDeleteOld_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show($"Are you sure to delete all files in\n{textBoxFilePath.Text} ?", "Confirm delete operation", MessageBoxButtons.OKCancel) == DialogResult.OK)
+            {
+                DirectoryInfo directory = new DirectoryInfo(textBoxFilePath.Text);
+
+                foreach (FileInfo file in directory.EnumerateFiles())
+                {
+                    if (file.Name.Contains(".csv"))
+                    {
+                        file.Delete();
+                    }
+                }
+            }
         }
 
         private void weighInReport()
@@ -902,5 +925,6 @@ namespace WTP_Report_Manager.Forms
                 progressBar.Maximum += WTP_Report_Manager.visualizationData.ShowReportID.Count;
             }
         }
+
     }
 }

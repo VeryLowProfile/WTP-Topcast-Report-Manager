@@ -53,6 +53,8 @@ namespace WTP_Report_Manager.Forms
             this.labelOptions = new System.Windows.Forms.Label();
             this.richTextBoxLog = new System.Windows.Forms.RichTextBox();
             this.progressBar = new System.Windows.Forms.ProgressBar();
+            this.buttonDeleteOld = new System.Windows.Forms.Button();
+            this.labelDeletePath = new System.Windows.Forms.Label();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanelSelect.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
@@ -221,6 +223,8 @@ namespace WTP_Report_Manager.Forms
             // 
             // panelOptions
             // 
+            this.panelOptions.Controls.Add(this.labelDeletePath);
+            this.panelOptions.Controls.Add(this.buttonDeleteOld);
             this.panelOptions.Controls.Add(this.checkBoxResume);
             this.panelOptions.Controls.Add(this.checkBoxCountersData);
             this.panelOptions.Controls.Add(this.checkBoxEventData);
@@ -384,6 +388,29 @@ namespace WTP_Report_Manager.Forms
             this.progressBar.TabIndex = 8;
             this.progressBar.Tag = "";
             // 
+            // buttonDeleteOld
+            // 
+            this.buttonDeleteOld.BackColor = System.Drawing.Color.Red;
+            this.buttonDeleteOld.ForeColor = System.Drawing.Color.White;
+            this.buttonDeleteOld.Location = new System.Drawing.Point(1317, 23);
+            this.buttonDeleteOld.Name = "buttonDeleteOld";
+            this.buttonDeleteOld.Size = new System.Drawing.Size(126, 32);
+            this.buttonDeleteOld.TabIndex = 16;
+            this.buttonDeleteOld.Text = "Delete Old Reports";
+            this.buttonDeleteOld.UseVisualStyleBackColor = false;
+            this.buttonDeleteOld.Click += new System.EventHandler(this.buttonDeleteOld_Click);
+            // 
+            // labelDeletePath
+            // 
+            this.labelDeletePath.AutoSize = true;
+            this.labelDeletePath.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelDeletePath.ForeColor = System.Drawing.Color.Gray;
+            this.labelDeletePath.Location = new System.Drawing.Point(1320, 56);
+            this.labelDeletePath.Name = "labelDeletePath";
+            this.labelDeletePath.Size = new System.Drawing.Size(55, 15);
+            this.labelDeletePath.TabIndex = 17;
+            this.labelDeletePath.Text = "File Path";
+            // 
             // FormReports
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -428,5 +455,7 @@ namespace WTP_Report_Manager.Forms
         private System.Windows.Forms.CheckBox checkBoxCountersData;
         private System.Windows.Forms.CheckBox checkBoxResume;
         private System.Windows.Forms.ProgressBar progressBar;
+        private System.Windows.Forms.Label labelDeletePath;
+        private System.Windows.Forms.Button buttonDeleteOld;
     }
 }
