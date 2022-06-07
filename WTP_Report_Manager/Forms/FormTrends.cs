@@ -118,7 +118,7 @@ namespace WTP_Report_Manager.Forms
 
                 if (selectedIndex == 0)
                 {
-                    listBoxHide.SelectedIndex = 0;
+                    //listBoxHide.SelectedIndex = 0;
                 } else
                 {
                     listBoxHide.SelectedIndex = selectedIndex - 1;
@@ -139,7 +139,7 @@ namespace WTP_Report_Manager.Forms
             if (listBoxShow.SelectedItems != null)
             {
 
-                int selectedIndex = listBoxHide.SelectedIndices[0];
+                int selectedIndex = listBoxShow.SelectedIndices[0];
 
                 foreach (string item in listBoxShow.SelectedItems)
                 {
@@ -153,7 +153,7 @@ namespace WTP_Report_Manager.Forms
 
                 if (selectedIndex == 0)
                 {
-                    listBoxShow.SelectedIndex = 0;
+                    //listBoxShow.SelectedIndex = 0;
                 }
                 else
                 {

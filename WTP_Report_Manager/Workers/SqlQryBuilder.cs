@@ -18,7 +18,10 @@ namespace WTP_Report_Manager.Workers
 
             if (searchParam.SearchByDate)
             {
-                qry = $"SELECT Fo AS [OF], DateTime FROM Resume WHERE DateTime >= '{searchParam.SearchDateFrom.Date.ToString("yyyy-MM-dd HH:mm:ss")}' AND DateTime <= '{searchParam.SearchDateTo.Date.ToString("yyyy-MM-dd HH:mm:ss")}' ORDER BY DateTime";
+                //Rolex 
+                //qry = $"SELECT Fo AS [OF], DateTime FROM Resume WHERE DateTime >= '{searchParam.SearchDateFrom.Date.ToString("yyyy-MM-dd HH:mm:ss")}' AND DateTime <= '{searchParam.SearchDateTo.Date.ToString("yyyy-MM-dd HH:mm:ss")}' ORDER BY DateTime";
+                //Topcast
+                qry = $"SELECT Fo AS [OF], DateTime FROM Resume WHERE DateTime >= '{searchParam.SearchDateFrom.Date.ToString("yyyy-dd-MM HH:mm:ss")}' AND DateTime <= '{searchParam.SearchDateTo.Date.ToString("yyyy-dd-MM HH:mm:ss")}' ORDER BY DateTime";
             }
 
             return qry;
@@ -53,6 +56,7 @@ namespace WTP_Report_Manager.Workers
                 $"BoxNbIN AS [Nb bidon déchet]," +
                 $"BoxNbOUT AS [Nb bidon grenaille]," +
                 $"FumesExtimation AS [Evaluation fumées]," +
+                $"SplashExtimation AS [Evaluation Splashes]," +
                 $"GrainsEvaluation AS [Evaluation grenaille]," +
                 $"Datetime AS [Date - heure contrôle] " +
                 $"FROM Resume " +
